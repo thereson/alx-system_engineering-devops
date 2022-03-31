@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -apm | sort -d' > 103-commas
