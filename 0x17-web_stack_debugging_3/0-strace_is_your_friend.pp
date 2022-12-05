@@ -1,2 +1,6 @@
-6c1392aa3f8609a7062e14f94d2fae2c
-d0b38147de661f7575781a0460874c94b156a954
+# Fix 500 error when a GET HTTP method is requested to Apache web server
+
+exec {'replace':
+  provider => shell,
+  command  => 'sed -i "s/phpp/php/g" /var/www/html/wp-settings.php'
+}
